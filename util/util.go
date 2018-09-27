@@ -20,8 +20,13 @@ func Memzero(buf []byte) {
 	}
 }
 
-func NewUUID() string {
-	return uuid.NewV4().String()
+func NewUUID() (string, error) {
+	uuid, err := uuid.NewV4()
+	if err != nil {
+		return "", err
+	}
+
+	return uuid.String(), nil
 }
 
 func WriteErrorResponse(w http.ResponseWriter, e error) error {
