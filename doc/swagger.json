@@ -2,6 +2,7 @@
   "swagger": "2.0",
   "info": {
     "description": "Authorization API",
+    "version": "1.0.0",
     "title": "Virtual Security Module"
   },
   "basePath": "/",
